@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEN Coffee Shop | Contact</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand">DEN Coffee Shop</h1>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a class="active" href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="contact-hero">
+            <div class="container contact-hero-inner">
+                <div class="row align-items-center g-5">
+                    <div class="col-md-6">
+                        <h1 class="contact-title">DEN COFFEE<br>IS ONLINE</h1>
+                        <div class="contact-actions">
+                            <a class="light-btn" href="#contact-form">CONTACT US ➜</a>
+                            <a class="dark-btn" href="https://maps.google.com/" target="_blank" rel="noopener">FIND A COFFEE SHOP ➜</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="contact-details">
+                            <div class="contact-detail-row">
+                                <div class="contact-label">OUR OFFICE</div>
+                                <div class="contact-value">Kazakhstan, Astana</div>
+                            </div>
+                            <div class="contact-detail-row">
+                                <div class="contact-label">PHONE</div>
+                                <div class="contact-value">
+                                    <p>+7 777 777 77 77</p>
+                                    <p>+7 777 888 77 77</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-row">
+                                <div class="contact-label">MEDIA</div>
+                                <div class="contact-value">
+                                    <p>Instagram &nbsp;&nbsp; TikTok</p>
+                                    <p>Threads</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-form" class="contact-form-section">
+            <h2 class="text-center">Send us a message</h2>
+            <form class="row g-3" action="#" method="get">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-12">
+                    <label for="topic" class="form-label">Topic</label>
+                    <select id="topic" name="topic" class="form-select">
+                        <option>General question</option>
+                        <option>Booking</option>
+                        <option>Feedback</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button class="btn btn-dark px-4" type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        Contact: hello@dencoffee.example &nbsp;|&nbsp; © 2026 DEN COFFEE
+    </footer>
+</body>
+</html>
