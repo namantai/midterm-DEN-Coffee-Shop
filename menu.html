@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEN Coffee Shop | Menu</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1 class="brand">DEN Coffee Shop</h1>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a class="active" href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <h1 class="page-title">Our Menu</h1>
+
+        <section class="menu-area">
+            <div id="menuCarousel" class="carousel slide container" data-bs-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row align-items-center menu-slide">
+                            <div class="col-md-4 menu-card">
+                                <img src="assets/images/espresso.jpg" alt="Espresso coffee">
+                            </div>
+                            <div class="col-md-4 menu-card featured">
+                                <img src="assets/images/iced-latte.jpg" alt="Iced latte">
+                            </div>
+                            <div class="col-md-4 menu-card">
+                                <img src="assets/images/images_3.jpg" alt="Coffee and toast">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row align-items-center menu-slide">
+                            <div class="col-md-4 menu-card">
+                                <img src="assets/images/images_4.jpg" alt="Coffee with dessert">
+                            </div>
+                            <div class="col-md-4 menu-card featured">
+                                <img src="assets/images/images_5.jpg" alt="Coffee in cafe interior">
+                            </div>
+                            <div class="col-md-4 menu-card">
+                                <img src="assets/images/images_6.jpg" alt="Coffee and pastries">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev" aria-label="Previous menu photos">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next" aria-label="Next menu photos">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <section class="price-section">
+            <h2 class="text-center">Coffee Prices</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Drink</th>
+                            <th>Size</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Espresso</td><td>30 ml</td><td>900 ₸</td></tr>
+                        <tr><td>Americano</td><td>250 ml</td><td>1 200 ₸</td></tr>
+                        <tr><td>Cappuccino</td><td>300 ml</td><td>1 500 ₸</td></tr>
+                        <tr><td>Latte</td><td>350 ml</td><td>1 600 ₸</td></tr>
+                        <tr><td>Iced Latte</td><td>400 ml</td><td>1 800 ₸</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        Contact: hello@dencoffee.example &nbsp;|&nbsp; © 2026 DEN COFFEE
+    </footer>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
