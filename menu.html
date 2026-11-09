@@ -12,7 +12,7 @@
         <h1 class="brand">DEN Coffee Shop</h1>
         <nav class="main-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a class="active" href="menu.html">Menu</a>
+            <a class="active" href="menu.html" aria-current="page">Menu</a>
             <a href="about.html">About</a>
             <a href="gallery.html">Gallery</a>
             <a href="contact.html">Contact</a>
@@ -20,7 +20,8 @@
     </header>
 
     <main class="page-main">
-        <h1 class="page-title">Our Menu</h1>
+        <h1 class="page-title mb-2">Our Menu</h1>
+        <p class="text-center mb-4"><a href="#coffee-prices" class="link-dark">Explore drinks and prices ↓</a></p>
 
         <section class="menu-area">
             <div id="menuCarousel" class="carousel slide container" data-bs-interval="false">
@@ -34,7 +35,7 @@
                                 <img src="assets/images/iced-latte.jpg" alt="Iced latte">
                             </div>
                             <div class="col-md-4 menu-card">
-                                <img src="assets/images/images_3.jpg" alt="Coffee and toast">
+                                <img src="assets/images/images_3.jpg" alt="Iced latte beside green plants">
                             </div>
                         </div>
                     </div>
@@ -42,13 +43,13 @@
                     <div class="carousel-item">
                         <div class="row align-items-center menu-slide">
                             <div class="col-md-4 menu-card">
-                                <img src="assets/images/images_4.jpg" alt="Coffee with dessert">
+                                <img src="assets/images/images_4.jpg" alt="Iced latte beside an open journal">
                             </div>
                             <div class="col-md-4 menu-card featured">
-                                <img src="assets/images/images_5.jpg" alt="Coffee in cafe interior">
+                                <img src="assets/images/images_5.jpg" alt="Iced black coffee in sunlight">
                             </div>
                             <div class="col-md-4 menu-card">
-                                <img src="assets/images/images_6.jpg" alt="Coffee and pastries">
+                                <img src="assets/images/images_6.jpg" alt="White coffee cup on a saucer">
                             </div>
                         </div>
                     </div>
@@ -63,33 +64,63 @@
             </div>
         </section>
 
-        <section class="price-section">
-            <h2 class="text-center">Coffee Prices</h2>
+        <section id="coffee-prices" class="price-section" aria-labelledby="price-heading">
+            <h2 id="price-heading" class="mb-3">Coffee Prices</h2>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="drink-search" class="form-label">Search drinks</label>
+                    <input id="drink-search" class="form-control" type="search" placeholder="Try latte">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <label for="drink-type" class="form-label">Served</label>
+                    <select id="drink-type" class="form-select">
+                        <option value="all">All drinks</option>
+                        <option value="hot">Hot</option>
+                        <option value="iced">Iced</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <label for="drink-sort" class="form-label">Sort by</label>
+                    <select id="drink-sort" class="form-select">
+                        <option value="original">Menu order</option>
+                        <option value="price">Price: high to low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+            <p id="menu-status" class="small text-secondary mb-2" role="status"></p>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped align-middle">
+                    <caption class="visually-hidden">Coffee prices and sizes</caption>
                     <thead class="table-dark">
                         <tr>
-                            <th>Drink</th>
-                            <th>Size</th>
-                            <th>Price</th>
+                            <th scope="col">Drink</th>
+                            <th scope="col">Size</th>
+                            <th scope="col">Price</th>
+                            <th scope="col"><span class="visually-hidden">Add to estimate</span></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr><td>Espresso</td><td>30 ml</td><td>900 ₸</td></tr>
-                        <tr><td>Americano</td><td>250 ml</td><td>1 200 ₸</td></tr>
-                        <tr><td>Cappuccino</td><td>300 ml</td><td>1 500 ₸</td></tr>
-                        <tr><td>Latte</td><td>350 ml</td><td>1 600 ₸</td></tr>
-                        <tr><td>Iced Latte</td><td>400 ml</td><td>1 800 ₸</td></tr>
-                    </tbody>
+                    <tbody id="drink-rows"></tbody>
                 </table>
             </div>
+
+            <section class="border bg-light p-3 p-md-4 mt-4" aria-labelledby="estimate-heading">
+                <h2 id="estimate-heading" tabindex="-1">Drink estimate</h2>
+                <p id="order-status" role="status">Add drinks to estimate the cost of your visit.</p>
+                <ul id="order-items" class="list-unstyled mb-0"></ul>
+                <div class="d-flex justify-content-between border-top pt-3">
+                    <strong>Total</strong>
+                    <strong id="order-total">0 ₸</strong>
+                </div>
+            </section>
         </section>
     </main>
 
     <footer class="site-footer">
-        Contact: hello@dencoffee.example &nbsp;|&nbsp; © 2026 DEN COFFEE
+        Contact: hello@dencoffee.example | © 2026 DEN COFFEE
     </footer>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/menu.js"></script>
 </body>
 </html>
