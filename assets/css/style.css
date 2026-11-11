@@ -310,3 +310,26 @@ img { max-width: 100%; display: block; }
     .contact-details { margin-top: 42px; margin-left: 0; }
     .contact-detail-row { grid-template-columns: 110px 1fr; gap: 12px; }
 }
+
+/* Expandable visit information follows the original About section. */
+.visit-questions {
+    max-width: 700px;
+    margin: 0 auto 64px;
+    padding: 0 24px;
+}
+.visit-questions h2 { margin-bottom: 20px; }
+.visit-questions details { border-top: 1px solid #c9c9c9; }
+.visit-questions details:last-child { border-bottom: 1px solid #c9c9c9; }
+.visit-questions summary { padding: 14px 0; }
+.visit-questions details[open] summary { font-weight: bold; }
+.visit-questions p { margin: 0 0 16px; }
+.visit-questions a { color: inherit; }
+
+/* Keep the three photos in each carousel slide together on small screens. */
+@media (max-width: 767px) {
+    .menu-slide { margin: 0; min-height: 0; padding: 14px 0; }
+    .menu-card { width: 33.3333%; min-height: 0; padding: 0 4px; margin: 0; }
+    .menu-card img { height: clamp(140px, 30vw, 220px); }
+    .menu-card.featured img { height: clamp(170px, 36vw, 265px); }
+    .menu-area::before { height: 42%; }
+}
