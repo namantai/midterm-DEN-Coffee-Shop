@@ -22,6 +22,9 @@
     <main class="page-main">
         <h1 class="page-title mb-2">Our Menu</h1>
         <p class="text-center mb-4"><a href="#coffee-prices" class="link-dark">Explore drinks and prices ↓</a></p>
+        <div class="theme-control container text-end mb-3">
+            <button id="theme-toggle" class="btn btn-outline-dark" type="button" aria-pressed="false">Use dark theme</button>
+        </div>
 
         <section class="menu-area">
             <div id="menuCarousel" class="carousel slide container" data-bs-interval="false">
@@ -104,7 +107,7 @@
                 </table>
             </div>
 
-            <section class="border bg-light p-3 p-md-4 mt-4" aria-labelledby="estimate-heading">
+            <section class="estimate-panel border bg-light p-3 p-md-4 mt-4" aria-labelledby="estimate-heading">
                 <h2 id="estimate-heading" tabindex="-1">Drink estimate</h2>
                 <p id="order-status" role="status">Add drinks to estimate the cost of your visit.</p>
                 <ul id="order-items" class="list-unstyled mb-0"></ul>
@@ -113,6 +116,28 @@
                     <strong id="order-total">0 ₸</strong>
                 </div>
             </section>
+        </section>
+
+        <section class="price-section notes-section" aria-labelledby="notes-heading">
+            <h2 id="notes-heading">My Coffee Notes</h2>
+            <p>Keep your own tasting notes in this browser. Add a note, then edit or delete it whenever you like.</p>
+            <form id="note-form" class="row g-3 mb-4">
+                <input id="note-id" type="hidden">
+                <div class="col-md-4">
+                    <label for="note-drink" class="form-label">Drink</label>
+                    <input id="note-drink" class="form-control" maxlength="50" required placeholder="e.g. Cappuccino">
+                </div>
+                <div class="col-md-6">
+                    <label for="note-text" class="form-label">Your tasting note</label>
+                    <input id="note-text" class="form-control" maxlength="180" required placeholder="What did you notice?">
+                </div>
+                <div class="col-md-2 d-flex align-items-end gap-2">
+                    <button id="note-submit" class="btn btn-dark" type="submit">Save note</button>
+                    <button id="note-cancel" class="btn btn-outline-secondary" type="button" hidden>Cancel</button>
+                </div>
+            </form>
+            <p id="notes-status" role="status" aria-live="polite"></p>
+            <ul id="notes-list" class="list-unstyled"></ul>
         </section>
     </main>
 

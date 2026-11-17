@@ -1,8 +1,37 @@
-# DEN Coffee Shop — Endterm Project
+# DEN Coffee Shop
 
-DEN Coffee Shop is a five-page café website for Astana. This version extends the [group's midterm repository](https://github.com/namantai/midterm-DEN-Coffee-Shop). It keeps the original Home, Menu, About, Gallery and Contact pages, the shared navigation, coffee photos, responsive layout, Bootstrap carousel and five original drink prices.
+DEN Coffee Shop is a responsive five-page café website for Astana. This final project continues the existing midterm/endterm site and keeps its Home, Menu, About, Gallery, Contact, Bootstrap carousel, gallery viewer, contact validation, FAQ, price list, menu filters, and drink estimate.
 
-## Group
+## Project links
+
+- Source repository: https://github.com/namantai/midterm-DEN-Coffee-Shop
+- Deployment: Not published as part of this project update. No live site URL is claimed.
+
+## Run locally
+
+1. Download or extract the complete project folder.
+2. Open `index.html` in a current browser. There is no build step or package installation.
+3. Open `menu.html` to use the menu tools and live weather panel. Internet access is needed for the weather API; the other site features work locally.
+
+## Final stage features
+
+- **Live API data:** `assets/js/weather.js` uses `fetch()` and async/await to request current Astana weather from the public Open-Meteo Forecast API. It shows loading, success, empty-data and error/retry states, and renders returned JSON with DOM elements. No API key is required. API documentation: https://open-meteo.com/en/docs.
+- **Object-oriented JavaScript:** `assets/js/menu.js` defines a `Drink` class with properties and a price method, then creates five drink objects used by the live menu.
+- **Persistent estimate:** the drink estimate saves to `localStorage` as JSON and restores on the next visit. Missing, malformed, or inaccessible storage is handled safely.
+- **Advanced menu search:** search by drink name, filter hot/iced drinks, and sort by menu order, price, or name. The result count and no-match state update as the controls change.
+- **Coffee Notes CRUD:** create, view, edit, and delete tasting notes. Notes are kept in browser `localStorage`; form fields are validated and user text is rendered safely as text.
+- **Theme preference:** switch the Menu page between light and dark themes; the selected preference is stored safely and restored on return.
+- **Responsive and accessible UI:** semantic labels, live status announcements, keyboard-focus handling for the estimate, responsive layouts, and a retry action for API errors.
+
+## API and storage
+
+The API request is made by the browser to `https://api.open-meteo.com/v1/forecast` for coordinates in Astana and current temperature, humidity, and weather code. The service is public and does not require a secret key. Network failures are shown in the page and can be retried.
+
+Browser storage keys are `denCoffeeEstimate.v1`, `denCoffeeNotes.v1`, and `denCoffeeTheme.v1`. Stored data stays in the current browser profile and is not sent to a server. Clearing browser site data removes these saved estimates, notes, and theme preference.
+
+## Group and contributions
+
+The existing project README lists the following group members:
 
 | Member | GitHub |
 | --- | --- |
@@ -10,21 +39,24 @@ DEN Coffee Shop is a five-page café website for Astana. This version extends th
 | Dauren Tilek | [DaurenTilek](https://github.com/DaurenTilek) |
 | Erasyl | [madiulyerasyl](https://github.com/madiulyerasyl) |
 
-## Run the site
+Individual contribution details were not provided with this update. Each group member should add a short, accurate description of their own work here before submission; no contribution claims have been assigned on their behalf.
 
-Extract the complete project, then open `index.html` in a current browser. The pages use relative paths. Bootstrap 5.3.6, jQuery 3.6.1 and all photographs are inside `assets/`. The site runs offline with no package installation or build step.
+## Manual verification
 
-## Features and manual tests
-
-| Where | Try this | Expected result |
+| Page | Action | Expected result |
 | --- | --- | --- |
-| Menu → carousel | Click Next, then Previous. | The second group of photos appears, then the original group returns. |
-| Menu → Coffee Prices | Enter `latte`, choose Iced, then enter `tea`. | The table shows two lattes, then one iced latte, then a message about no matches. |
-| Menu → Sort by | Clear the search, choose All drinks, then sort by price or name. | Iced Latte appears first by descending price, Americano first alphabetically, and Espresso first in Menu order. |
-| Menu → Drink estimate | Add Espresso once and Iced Latte twice. Click the minus button for Iced Latte. | The first total is 4,500 ₸. Removing one iced latte changes it to 2,700 ₸. Removing all cups clears the list and returns the total to 0 ₸. |
-| About → Before your visit | Open the question about cold coffee and follow its menu link. | The answer expands and the link takes you to the drink prices. |
-| Gallery | Open the first photo, press the left arrow, click Next and press Escape. | The viewer wraps to photo 6, then photo 1. Escape closes it and returns focus to the first thumbnail. |
-| Contact | Click Check message with all fields empty. Try `guest@` as the email. | Each empty field gets its own error. The name field receives focus first. The email field explains how to correct its format. |
-| Contact | Enter `Demo Guest`, `guest@example.com`, choose Feedback and enter `I like the iced latte.` | Checking the form shows a success message. Editing a field clears the previous success. |
+| Home | Navigate through the main links and open View Menu. | All original pages remain reachable. |
+| Menu | Wait for weather, then use Try again after disconnecting the network or blocking the request. | Weather shows loading, current conditions on success, or a readable error and retry action. |
+| Menu | Switch to dark theme, reload, then switch back. | Theme changes consistently and the selected preference is restored after reload. |
+| Menu | Search `latte`, choose Iced, then search `tea`. | Two lattes appear, then one iced latte, then a no-match message. |
+| Menu | Clear search, choose All drinks, and sort by price or name. | Iced Latte sorts first by price; Americano sorts first alphabetically. |
+| Menu | Add Espresso and two Iced Lattes, then refresh the page. | The total is 4,500 ₸ and the same estimate is restored after refresh. Remove a cup; the total updates and persists. |
+| Menu | Add a tasting note, edit it, refresh the page, and delete it. | Each CRUD action updates the list; the note remains after refresh and disappears after deletion. |
+| About | Open a visit FAQ item and follow its menu link. | The answer expands and the link navigates to menu prices. |
+| Gallery | Open a photo, use arrow keys and close with Escape. | The viewer changes photos and returns focus to the thumbnail when closed. |
+| Contact | Submit empty fields, then try `guest@`. | Required-field and email-format validation messages appear. |
+| Contact | Submit valid sample data. | The form shows its local success confirmation; it does not send email or place an order. |
 
-The estimate is held in memory for the current page. The contact form validates input in the browser. It does not place an order, send email or save personal details.
+## Deployment
+
+This project update has not been published to GitHub Pages, Netlify, or another host. To deploy, publish the project root as a static site and then replace the deployment status above with the verified live URL. The repository URL above points to the source repository and is not a deployment URL.

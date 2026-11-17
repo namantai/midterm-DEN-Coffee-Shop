@@ -136,6 +136,37 @@ img { max-width: 100%; display: block; }
 .carousel-control-next { right: 2px; }
 .carousel-control-prev:hover, .carousel-control-next:hover { opacity: 0.85; }
 .price-section { max-width: 850px; margin: 10px auto 60px; padding: 0 18px; }
+.weather-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 28px;
+    background: #eeeeeb;
+}
+.weather-panel .small-title { display: inline-block; margin: 0 0 8px; }
+.weather-panel h2 { margin: 0; }
+.weather-panel p:last-child { margin-bottom: 0; }
+.weather-data { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+.weather-temperature { font-size: 38px; }
+.notes-section { padding-top: 20px; border-top: 1px solid #d6d6d6; }
+.note-item { padding: 14px 0; border-bottom: 1px solid #d6d6d6; }
+body.theme-dark { color: #f2eee8; background: #191817; }
+body.theme-dark .link-dark { color: #f2eee8 !important; }
+body.theme-dark .weather-panel,
+body.theme-dark .estimate-panel { color: #f2eee8; background: #292725 !important; }
+body.theme-dark .weather-panel .btn,
+body.theme-dark .theme-control .btn,
+body.theme-dark .table,
+body.theme-dark .notes-section .form-control,
+body.theme-dark .notes-section .btn-outline-dark { color: #f2eee8; }
+body.theme-dark .table { --bs-table-color: #f2eee8; --bs-table-bg: #242220; --bs-table-striped-bg: #2d2b28; --bs-table-border-color: #55514b; }
+body.theme-dark .notes-section .form-control { background: #242220; border-color: #625d55; }
+body.theme-dark .menu-area::before { background: #3a3835; }
+body.theme-dark .weather-panel .btn,
+body.theme-dark .theme-control .btn,
+body.theme-dark .notes-section .btn-outline-dark { border-color: #d8d1c7; }
+body.theme-dark .btn-outline-dark { color: #f2eee8; border-color: #d8d1c7; }
 
 /* About */
 .about-page {
