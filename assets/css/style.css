@@ -340,6 +340,8 @@ body.theme-dark .btn-outline-dark { color: #f2eee8; border-color: #d8d1c7; }
     .contact-title { margin-bottom: 28px; font-size: 44px; }
     .contact-details { margin-top: 42px; margin-left: 0; }
     .contact-detail-row { grid-template-columns: 110px 1fr; gap: 12px; }
+    .weather-panel { align-items: flex-start; flex-direction: column; padding: 20px; }
+    .weather-data { gap: 8px 18px; }
 }
 
 /* Expandable visit information follows the original About section. */

@@ -67,6 +67,18 @@
             </div>
         </section>
 
+        <section class="container mb-5" aria-labelledby="weather-heading">
+            <div class="weather-panel">
+                <div>
+                    <p class="small-title">Astana, Kazakhstan</p>
+                    <h2 id="weather-heading">Local weather</h2>
+                    <p id="weather-status" role="status" aria-live="polite">Loading current weather…</p>
+                </div>
+                <div id="weather-data" class="weather-data" hidden></div>
+                <button id="weather-retry" class="btn btn-outline-dark" type="button" hidden>Try again</button>
+            </div>
+        </section>
+
         <section id="coffee-prices" class="price-section" aria-labelledby="price-heading">
             <h2 id="price-heading" class="mb-3">Coffee Prices</h2>
             <div class="row g-3 mb-3">
@@ -146,6 +158,7 @@
     </footer>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/weather.js"></script>
     <script src="assets/js/menu.js"></script>
 </body>
 </html>
