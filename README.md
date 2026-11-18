@@ -5,7 +5,6 @@ DEN Coffee Shop is a responsive five-page café website for Astana. This final p
 ## Project links
 
 - Source repository: https://github.com/namantai/midterm-DEN-Coffee-Shop
-- Deployment: Not published as part of this project update. No live site URL is claimed.
 
 ## Run locally
 
@@ -56,7 +55,3 @@ Individual contribution details were not provided with this update. Each group m
 | Gallery | Open a photo, use arrow keys and close with Escape. | The viewer changes photos and returns focus to the thumbnail when closed. |
 | Contact | Submit empty fields, then try `guest@`. | Required-field and email-format validation messages appear. |
 | Contact | Submit valid sample data. | The form shows its local success confirmation; it does not send email or place an order. |
-
-## Deployment
-
-This project update has not been published to GitHub Pages, Netlify, or another host. To deploy, publish the project root as a static site and then replace the deployment status above with the verified live URL. The repository URL above points to the source repository and is not a deployment URL.
