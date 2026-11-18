@@ -261,8 +261,9 @@ function deleteNote(id) {
     }
     if (noteId.value === id) resetNoteForm();
     renderNotes();
+    if (noteId.value === id) resetNoteForm();
+    renderNotes();
 }
-
 searchInput.addEventListener("input", renderMenu);
 typeSelect.addEventListener("change", renderMenu);
 sortSelect.addEventListener("change", renderMenu);
